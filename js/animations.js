@@ -14,7 +14,7 @@ class AnimationController {
         this.initScrollAnimations();
         this.initHoverEffects();
         this.initTypewriterEffects();
-        this.initParticleSystem();
+        //this.initParticleSystem();
         this.initMorphingElements();
         this.initTiltEffects();
         
