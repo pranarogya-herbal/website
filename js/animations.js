@@ -256,12 +256,12 @@ class AnimationController {
         });
 
         // Floating elements
-        const floatingElements = document.querySelectorAll('.floating-leaf');
-        floatingElements.forEach((element, index) => {
-            const speed = 0.3 + (index * 0.1);
-            const yPos = Math.sin(scrolled * 0.01 + index) * 20;
-            element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
-        });
+        // const floatingElements = document.querySelectorAll('.floating-leaf');
+        // floatingElements.forEach((element, index) => {
+        //     const speed = 0.3 + (index * 0.1);
+        //     const yPos = Math.sin(scrolled * 0.01 + index) * 20;
+        //     element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+        // });
     }
 
     // Advanced hover effects
