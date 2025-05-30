@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranarogya Herbal - Pure Organic Products | Ayurvedic Wellness</title>
+    <meta name="description" content="Discover premium organic products rooted in ancient Ayurvedic wisdom. Pranarogya Herbal offers pure spices, natural cosmetics, healthy snacks, and wellness products.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="leaf leaf1"></div>
+            <div class="leaf leaf2"></div>
+            <div class="leaf leaf3"></div>
+            <div class="loader-text">Pranarogya Herbal</div>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo-container" onclick="scrollToSection('home')">
+                    <img src="assets/images/pranarogyaLogo.png" alt="Pranarogya Herbal" class="logo" style="background-color:white;">
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link" onclick="scrollToSection('home')">Home</a>
+                    <a href="#about" class="nav-link" onclick="scrollToSection('about')">About</a>
+                    <a href="#philosophy" class="nav-link" onclick="scrollToSection('philosophy')">Philosophy</a>
+                    <a href="#products" class="nav-link" onclick="scrollToSection('products')">Products</a>
+                    <a href="#testimonials" class="nav-link" onclick="scrollToSection('testimonials')">Reviews</a>
+                    <a href="#contact" class="nav-link" onclick="scrollToSection('contact')">Contact</a>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="floating-elements">
+                <div class="floating-leaf leaf-1"></div>
+                <div class="floating-leaf leaf-2"></div>
+                <div class="floating-leaf leaf-3"></div>
+                <div class="floating-leaf leaf-4"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text" data-aos="fade-up" data-aos-delay="200">
+                <h1 class="hero-title">
+                    <span class="title-line">Pure.</span>
+                    <span class="title-line">Natural.</span>
+                    <span class="title-line highlight">Ayurvedic.</span>
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    Discover the ancient wisdom of Ayurveda through our carefully crafted organic products
+                </p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                    <button class="btn btn-primary" onclick="scrollToSection('products')">
+                        <span>Explore Products</span>
+                        <i class="btn-icon">→</i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                        <span>Our Story</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" onclick="scrollToSection('about')">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="800">
+                    <div class="image-frame">
+                        <img src="assets/images/sakaleshKadadi.jpg" alt="Sakalesh Kadadi - Founder">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+                
+                <div class="about-text" data-aos="fade-left" data-aos-duration="800">
+                    <h2 class="section-title">Meet Our Founder</h2>
+                    <h3 class="founder-name">Sakalesh Kadadi</h3>
+                    
+                    <div class="about-description">
+                        <p>With over two decades of dedication to Ayurvedic wellness, Sakalesh Kadadi founded Pranarogya Herbal with a vision to bring authentic, organic products to modern households.</p>
+                        <p>His journey began in the traditional herb gardens of Karnataka, where he learned the ancient art of identifying and processing medicinal plants from experienced Ayurvedic practitioners.</p>
+                        <p>Today, Sakalesh continues to personally oversee every aspect of our production process, ensuring that each product maintains the highest standards of purity and potency.</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <span class="stat-number" data-count="20">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                            <span class="stat-number" data-count="100">0</span>
+                            <span class="stat-label">% Organic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="philosophy-bg"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Philosophy</h2>
+                <p class="section-subtitle">Rooted in ancient Ayurvedic wisdom, we believe in the power of nature to heal, nourish, and restore balance to modern life.</p>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon organic-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.73,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17 7,17C8,17 9,16.75 10,16.5C11,16.25 12,16 13,15.75C14,15.5 15,15.25 16,15C17,14.75 18,14.5 19,14.25C20,14 21,13.75 22,13.5C22,13.5 22,13.5 22,13.5"/>
+                        </svg>
+                    </div>
+                    <h3>100% Organic</h3>
+                    <p>Every ingredient is carefully sourced from certified organic farms, ensuring purity from soil to shelf.</p>
+                </div>
+
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon wisdom-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+                        </svg>
+                    </div>
+                    <h3>Ancient Wisdom</h3>
+                    <p>Traditional Ayurvedic formulations passed down through generations, perfected by modern science.</p>
+                </div>
+
+                <div class="philosophy-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon wellness-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"/>
+                        </svg>
+                    </div>
+                    <h3>Holistic Wellness</h3>
+                    <p>Products designed to support complete well-being - mind, body, and spirit in perfect harmony.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Our Product Range</h2>
+                <p class="section-subtitle">From kitchen essentials to wellness products, discover our carefully curated collection of organic offerings.</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Organic Spices">
+                        <div class="product-overlay">
+                            <span class="explore-text">Explore Range</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Organic Spices</h3>
+                        <p>Premium quality spices and seasonings sourced directly from organic farms.</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Healthy Snacks">
+                        <div class="product-overlay">
+                            <span class="explore-text">Explore Range</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Healthy Snacks</h3>
+                        <p>Nutritious biscuits and snacks made with wholesome organic ingredients.</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Natural Cosmetics">
+                        <div class="product-overlay">
+                            <span class="explore-text">Explore Range</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Natural Cosmetics</h3>
+                        <p>Gentle skincare products including our signature aloe vera gel collection.</p>
+                    </div>
+                </div>
+
+                <div class="product-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="product-image">
+                        <img src="assets/images/yoga.avif" alt="Wellness Products">
+                        <div class="product-overlay">
+                            <span class="explore-text">Explore Range</span>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Wellness Products</h3>
+                        <p>Traditional Ayurvedic formulations for holistic health and vitality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials" hidden>
+        <div class="testimonials-bg"></div>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Discover why families across India trust Pranarogya Herbal for their organic needs.</p>
+            </div>
+
+            <div class="testimonials-slider" id="testimonialsSlider">
+                <div class="testimonial-card active" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"The organic spices from Pranarogya have transformed my cooking. The aroma and flavor are incomparable to anything I've tried before."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Radha Sharma</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"Their aloe vera gel has been a game-changer for my skin. Pure, natural, and incredibly effective. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Amit Patel</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="stars">★★★★★</div>
+                        <p>"Finally found organic products I can trust for my family. The quality and authenticity of Pranarogya is unmatched."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sunita Reddy</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn" onclick="previousTestimonial()">‹</button>
+                <button class="slider-btn next-btn" onclick="nextTestimonial()">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions about our products or want to learn more about our organic process? We'd love to hear from you.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="800">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Organic Lane, Green Valley<br>Bangalore, Karnataka 560001<br>India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+919876543210" class="link-c3h8k">+91 8747859595</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:info@pranarogyaherbal.com" class="link-c3h8k">info@pranarogyaherbal.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container" data-aos="fade-left" data-aos-duration="800">
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <h3>Send us a Message</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <i class="btn-icon">→</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/pranarogyaLogo.png" alt="Pranarogya Herbal" class="footer-logo">
+                    <p>Bringing you the finest organic products rooted in ancient Ayurvedic wisdom.</p>
+                    <div class="social-links">
+						<a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+						<a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+                        <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                        <li><a href="#philosophy" onclick="scrollToSection('philosophy')">Philosophy</a></li>
+                        <li><a href="#products" onclick="scrollToSection('products')">Products</a></li>
+                        <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Organic Spices</a></li>
+                        <li><a href="#">Healthy Snacks</a></li>
+                        <li><a href="#">Natural Cosmetics</a></li>
+                        <li><a href="#">Wellness Products</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-x12j3">
+					<h4>Contact Info</h4>
+					<div class="contact-bq82k">
+						<p>123 Organic Lane, Green Valley</p>
+						<p>Bangalore, Karnataka 560001</p>
+						<div class="links-v92hf">
+							<p>
+								Phone: <a href="tel:+919876543210" class="link-c3h8k">+91 8747859595</a>
+							</p>
+							<p>
+								Email: <a href="mailto:info@pranarogyaherbal.com" class="link-c3h8k">info@pranarogyaherbal.com</a>
+							</p>
+						</div>
+					</div>
+				</div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pranarogya Herbal. All rights reserved. | Crafted with 💚 for organic wellness.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

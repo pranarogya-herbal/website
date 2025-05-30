@@ -1,0 +1,566 @@
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(127, 176, 105, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(127, 176, 105, 0.8);
+    }
+}
+
+@keyframes leafFall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes spinLeaf {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(90deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1);
+    }
+    75% {
+        transform: rotate(270deg) scale(0.9);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(127, 176, 105, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(127, 176, 105, 0.8);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        border-color: transparent;
+    }
+    51%, 100% {
+        border-color: var(--primary-green);
+    }
+}
+
+/* Preloader Animations */
+.leaf {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--secondary-green);
+    border-radius: 0 100% 0 100%;
+    animation: spinLeaf 2s linear infinite;
+}
+
+.leaf1 {
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.leaf2 {
+    top: 20px;
+    right: 20px;
+    animation-delay: 0.6s;
+}
+
+.leaf3 {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 1.2s;
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating-leaf {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgba(127, 176, 105, 0.3);
+    border-radius: 0 100% 0 100%;
+    animation: leafFall linear infinite;
+}
+
+.leaf-1 {
+    left: 10%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.leaf-2 {
+    left: 30%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.leaf-3 {
+    left: 60%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+.leaf-4 {
+    left: 80%;
+    animation-duration: 9s;
+    animation-delay: 6s;
+}
+
+/* Scroll Animations */
+.scroll-mouse {
+    width: 24px;
+    height: 40px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    position: relative;
+    margin: 0 auto 10px;
+}
+
+.scroll-wheel {
+    width: 4px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s ease-in-out infinite;
+}
+
+@keyframes scrollWheel {
+    0% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(16px);
+    }
+}
+
+/* Button Animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* Image Animations */
+.image-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.image-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.8s ease;
+    z-index: 1;
+}
+
+.image-frame:hover::before {
+    left: 100%;
+}
+
+.image-decoration {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--secondary-green);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Card Hover Effects */
+.philosophy-card,
+.product-card,
+.testimonial-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.philosophy-card:hover,
+.product-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.philosophy-card:hover .card-icon,
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+/* Product Image Overlay */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(79, 121, 66, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.explore-text {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 18px;
+    animation: bounceIn 0.6s ease;
+}
+
+/* Statistics Counter Animation */
+.stat-number {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Form Animations */
+.form-group input,
+.form-group textarea {
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Success Message Animation */
+.success-message {
+    background: var(--secondary-green);
+    color: var(--white);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+    animation: slideInUp 0.5s ease;
+}
+
+/* Testimonial Slider Animation */
+.testimonial-card {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s ease;
+}
+
+.testimonial-card.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonial-card.prev {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* Mobile Menu Animation */
+.nav-menu.mobile-open {
+    animation: slideInDown 0.3s ease;
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Responsive Animations */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+    
+    .floating-leaf {
+        display: none;
+    }
+    
+    .hero-title {
+        animation-duration: 0.8s;
+    }
+    
+    .title-line:nth-child(1) { animation-delay: 0.1s; }
+    .title-line:nth-child(2) { animation-delay: 0.2s; }
+    .title-line:nth-child(3) { animation-delay: 0.3s; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .parallax {
+        background-attachment: scroll;
+    }
+    
+    .floating-leaf {
+        display: none;
+    }
+}
