@@ -262,7 +262,7 @@ function handleFormSubmit(event) {
     
     // Construct the WhatsApp message
     const whatsappMessage = encodeURIComponent(
-        `Hello! I have a message from your website contact form:\n\n` +
+        `Hello! I am getting in touch with you from your website:\n\n` +
         `Name: ${name}\n` +
         `Email: ${email}\n` +
         `Subject: ${subject}\n` +
