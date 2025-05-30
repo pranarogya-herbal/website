@@ -37,7 +37,16 @@ body {
     font-family: var(--font-primary);
     line-height: 1.6;
     color: var(--dark-gray);
-    overflow-x: hidden;
+    overflow-x: hidden; /* Keep this to hide accidental horizontal scrollbars, but the goal is to fix the underlying issues */
+    word-wrap: break-word; /* Prevents long words/URLs from overflowing */
+    overflow-wrap: break-word; /* Modern equivalent */
+}
+
+/* Ensure images and media are responsive */
+img, video, iframe {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevents extra space below images */
 }
 
 .container {
@@ -88,6 +97,8 @@ body {
 .loader {
     text-align: center;
     position: relative;
+    /* Ensure nothing here has fixed widths that would overflow */
+    max-width: 90%; /* Added to ensure loader itself doesn't cause overflow on very small screens */
 }
 
 .loader-text {
@@ -115,7 +126,7 @@ body {
 }
 
 .nav-container {
-    max-width: 100%;
+    max-width: 100%; /* Important: Keep this */
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -124,6 +135,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* On mobile, if logo and hamburger are too wide, flex-wrap might be needed here,
+       but the main fix is collapsing the nav-menu. */
 }
 
 .logo-container {
@@ -141,7 +154,7 @@ body {
 }
 
 .nav-menu {
-    display: flex;
+    display: flex; /* Default for desktop */
     gap: 30px;
 }
 
@@ -175,7 +188,7 @@ body {
 }
 
 .hamburger {
-    display: none;
+    display: none; /* Hidden by default on desktop */
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
@@ -187,6 +200,89 @@ body {
     background: var(--dark-gray);
     transition: var(--transition);
 }
+
+/* --- Media Queries for Mobile Responsiveness (New/Updated Section) --- */
+
+@media (max-width: 768px) { /* This is your mobile breakpoint. Adjust if needed (e.g., 992px) */
+
+    /* Navigation adjustments */
+    .logo {
+        height: 35px; /* Slightly smaller logo on mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Make hamburger visible on mobile */
+        z-index: 1001; /* Ensure it's on top of the menu */
+    }
+
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .nav-menu {
+        display: none; /* Hidden by default on mobile, shown when 'mobile-open' is added by JS */
+        flex-direction: column; /* Stack links vertically */
+        position: fixed; /* Position relative to viewport for full screen overlay */
+        top: 0; /* Cover from the top */
+        left: 0;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full viewport height */
+        background: rgba(255, 255, 255, 0.98); /* Semi-transparent background */
+        box-shadow: var(--shadow-medium);
+        padding-top: 80px; /* Space for the logo/hamburger at the top */
+        overflow-y: auto; /* Enable scrolling if menu content is too long */
+        z-index: 999; /* Below the hamburger, above other content */
+        justify-content: flex-start; /* Align items from the top */
+        align-items: center; /* Center horizontally */
+        /* The slideInDown animation from animations.css will apply when .mobile-open is added */
+    }
+
+    /* This class is toggled by your JavaScript for the mobile menu */
+    .nav-menu.mobile-open {
+        display: flex; /* Show the menu */
+        /* No need to re-add animation here if it's in animations.css for .mobile-open */
+    }
+
+    .nav-menu .nav-link {
+        padding: 15px 20px; /* Larger touch targets for mobile */
+        width: 100%; /* Each link takes full width of the menu */
+        border-bottom: 1px solid var(--light-gray); /* Optional: visual separator */
+        color: var(--dark-gray); /* Ensure readability */
+        text-align: center;
+    }
+
+    .nav-menu .nav-link:last-child {
+        border-bottom: none; /* No border on the last link */
+    }
+
+    /* Adjust container padding for mobile if needed for sections */
+    .container {
+        padding: 0 15px; /* Slightly less padding on very small screens for content */
+    }
+
+    /* Grid Layout Adjustments (for #about and #contact sections) */
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr; /* Force single column on mobile */
+        gap: 30px; /* Adjust gap for vertical stacking */
+    }
+
+    /* If you have specific grid items, ensure they don't have fixed min-widths */
+    /* Example: if you have .about-item or .contact-form-group */
+    /* .about-item,
+    .contact-form-group {
+        min-width: unset;
+    } */
+}
+
+/* --- End of Media Queries --- */
 
 /* Hero Section */
 .hero {
