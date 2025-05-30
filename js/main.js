@@ -254,19 +254,35 @@ function handleFormSubmit(event) {
     const submitBtn = event.target.querySelector('.submit-btn');
     const originalText = submitBtn.innerHTML;
     
+    // Get form values
+    const name = event.target.name.value.trim();
+    const email = event.target.email.value.trim();
+    const subject = event.target.subject.value.trim();
+    const message = event.target.message.value.trim();
+    
+    // Construct the WhatsApp message
+    const whatsappMessage = encodeURIComponent(
+        `Hello! I have a message from your website contact form:\n\n` +
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Subject: ${subject}\n` +
+        `Message: ${message}`
+    );
+    
+    // WhatsApp URL with phone number and message
+    const whatsappURL = `https://wa.me/918722888282?text=${whatsappMessage}`;
+    
     // Show loading state
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
     
-    // Simulate form submission
+    // Open WhatsApp chat in new tab/window
+    window.open(whatsappURL, '_blank');
+    
+    // Simulate success state
     setTimeout(() => {
-        // Show success message
         showSuccessMessage();
-        
-        // Reset form
         event.target.reset();
-        
-        // Reset button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
     }, 2000);
