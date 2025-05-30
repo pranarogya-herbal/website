@@ -121,10 +121,9 @@ body {
 }
 
 .nav-content {
-    display: wrap;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .logo-container {
