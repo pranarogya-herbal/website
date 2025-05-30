@@ -1009,4 +1009,16 @@ body {
 	.footer-x12j3 .links-v92hf .link-c3h8k:hover {
 		color: #2e4e2e; /* Darker green on hover */
 	}
+
+	.particle-container {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  width: 100%;
+	  overflow: hidden;
+	  max-width: 100vw;
+	  pointer-events: none;
+	  z-index: 0;
+}
 }
