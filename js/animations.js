@@ -14,7 +14,7 @@ class AnimationController {
         this.initScrollAnimations();
         this.initHoverEffects();
         this.initTypewriterEffects();
-        //this.initParticleSystem();
+        this.initParticleSystem();
         this.initMorphingElements();
         this.initTiltEffects();
         
@@ -256,12 +256,12 @@ class AnimationController {
         });
 
         // Floating elements
-        // const floatingElements = document.querySelectorAll('.floating-leaf');
-        // floatingElements.forEach((element, index) => {
-        //     const speed = 0.3 + (index * 0.1);
-        //     const yPos = Math.sin(scrolled * 0.01 + index) * 20;
-        //     element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
-        // });
+        const floatingElements = document.querySelectorAll('.floating-leaf');
+        floatingElements.forEach((element, index) => {
+            const speed = 0.3 + (index * 0.1);
+            const yPos = Math.sin(scrolled * 0.01 + index) * 20;
+            element.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+        });
     }
 
     // Advanced hover effects
@@ -411,82 +411,82 @@ class AnimationController {
     }
 
     // Particle system for hero section
-    // initParticleSystem() {
-    //     const heroSection = document.querySelector('.hero');
-    //     if (!heroSection) return;
+    initParticleSystem() {
+        const heroSection = document.querySelector('.hero');
+        if (!heroSection) return;
         
-    //     const particleContainer = document.createElement('div');
-    //     particleContainer.className = 'particle-container';
-    //     particleContainer.style.cssText = `
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         height: 100%;
-    //         pointer-events: none;
-    //         overflow: hidden;
-    //     `;
+        const particleContainer = document.createElement('div');
+        particleContainer.className = 'particle-container';
+        particleContainer.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        `;
         
-    //     heroSection.appendChild(particleContainer);
+        heroSection.appendChild(particleContainer);
         
-    //     // Create particles
-    //     for (let i = 0; i < 20; i++) {
-    //         setTimeout(() => {
-    //             this.createParticle(particleContainer);
-    //         }, i * 500);
-    //     }
+        // Create particles
+        for (let i = 0; i < 20; i++) {
+            setTimeout(() => {
+                this.createParticle(particleContainer);
+            }, i * 500);
+        }
         
-    //     // Continue creating particles
-    //     setInterval(() => {
-    //         if (Math.random() > 0.7) {
-    //             this.createParticle(particleContainer);
-    //         }
-    //     }, 2000);
-    // }
+        // Continue creating particles
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                this.createParticle(particleContainer);
+            }
+        }, 2000);
+    }
 
-    // createParticle(container) {
-    //     const particle = document.createElement('div');
-    //     particle.className = 'particle';
-    //     particle.style.cssText = `
-    //         position: absolute;
-    //         width: 4px;
-    //         height: 4px;
-    //         background: rgba(127, 176, 105, 0.6);
-    //         border-radius: 50%;
-    //         pointer-events: none;
-    //     `;
+    createParticle(container) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(127, 176, 105, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+        `;
         
-    //     // Random starting position
-    //     particle.style.left = Math.random() * 100 + '%';
-    //     particle.style.top = '100%';
+        // Random starting position
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = '100%';
         
-    //     container.appendChild(particle);
+        container.appendChild(particle);
         
-    //     // Animate particle
-    //     const duration = 8000 + Math.random() * 4000;
-    //     const startTime = performance.now();
+        // Animate particle
+        const duration = 8000 + Math.random() * 4000;
+        const startTime = performance.now();
         
-    //     const animate = (currentTime) => {
-    //         const elapsed = currentTime - startTime;
-    //         const progress = elapsed / duration;
+        const animate = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = elapsed / duration;
             
-    //         if (progress < 1) {
-    //             const y = 100 - (progress * 120); // Move up and slightly beyond top
-    //             const x = parseFloat(particle.style.left) + Math.sin(progress * Math.PI * 2) * 2;
-    //             const opacity = 0.6 * (1 - progress);
+            if (progress < 1) {
+                const y = 100 - (progress * 120); // Move up and slightly beyond top
+                const x = parseFloat(particle.style.left) + Math.sin(progress * Math.PI * 2) * 2;
+                const opacity = 0.6 * (1 - progress);
                 
-    //             particle.style.top = y + '%';
-    //             particle.style.left = x + '%';
-    //             particle.style.opacity = opacity;
+                particle.style.top = y + '%';
+                particle.style.left = x + '%';
+                particle.style.opacity = opacity;
                 
-    //             requestAnimationFrame(animate);
-    //         } else {
-    //             container.removeChild(particle);
-    //         }
-    //     };
+                requestAnimationFrame(animate);
+            } else {
+                container.removeChild(particle);
+            }
+        };
         
-    //     requestAnimationFrame(animate);
-    // }
+        requestAnimationFrame(animate);
+    }
 
     // Morphing elements (logo, icons)
     initMorphingElements() {
